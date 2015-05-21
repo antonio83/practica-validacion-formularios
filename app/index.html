@@ -9,6 +9,8 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/bootstrap-formvalidate/bs_validaterequired.min.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -19,17 +21,147 @@
 
     <div class="hero-unit">
       <h1>Práctica validación formularios</h1>
-      <p>Aquí debería ir el enlace a <a href="https://github.com/juanda99/practica-validacion-formularios">tu respositorio en GitHub</a>, donde estará la versión de desarrollo.</p>
+      <p>Aquí debería ir el enlace a <a href="https://github.com/antonio83/practica-validacion-formularios">tu respositorio en GitHub</a>, donde estará la versión de desarrollo.</p>
+    
+
+    <form id="frmalta" class="form-horizontal" novalidate>
+            <div class="form-group">
+                <label for="nombre" class="col-sm-2 control-label">Nombre</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Introduce tu nombre">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="apellidos" class="col-sm-2 control-label">Apellidos</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" id="apellidos" name="apellidos" placeholder="Introduce tus apellidos">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="telefono" class="col-sm-2 control-label">Telefono</label>
+                <div class="col-sm-4">
+                    <input type="number" class="form-control" id="telefono" name="telefono" placeholder="Introduce tu nombre">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email" class="col-sm-2 control-label">Email</label>
+                <div class="col-sm-4">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Introduce tu email">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email2" class="col-sm-2 control-label">Email ¡otra vez!</label>
+                <div class="col-sm-4">
+                    <input type="email" class="form-control" id="email2" name="email2" placeholder="Introduce otra vez tu email">
+                </div>
+                </div>
+                <div class="form-group">
+                <label for="cuenta" class="col-sm-2 control-label">Cuenta</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" id="cuenta" name="cuenta" placeholder="Introduce tu cuenta bancaria">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="url" class="col-sm-2 control-label">Url</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" id="url" name="url" placeholder="Introduce tu web">
+                </div>
+                </div>
+            <div class="form-group">
+                <label for="comentario" class="col-sm-2 control-label">¿Como nos has conocido?</label>
+                <div class="col-sm-4">
+                  <input type="radio" class="form-control" id="radio" name="radio" value="conocido" placeholder="Elige tu opcion">Prefiero no contestar
+                  <input type="radio" class="form-control" id="radio" name="radio" value="conocido" placeholder="Elige tu opcion">Publicidad
+                  <input type="radio" class="form-control" id="radio" name="radio" value="conocido" placeholder="Elige tu opcion">Profesionales del sector
+                  <input type="radio" class="form-control" id="radio" name="radio" value="conocido" placeholder="Elige tu opcion">Internet
+                  <input type="radio" class="form-control" id="radio" name="radio" value="conocido" placeholder="Elige tu opcion">A traves de un amigo o conocido
+                 </div>
+                </div>
+            <div class="form-group">
+                <label for="demandante" class="col-sm-2 control-label">Demandante (Particular o Empresa)</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" id="demandante" name="demandante" placeholder="Introduce tu nombre">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="nif" class="col-sm-2 control-label">CIF/NIF</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" id="nif" name="nif" placeholder="Introduce tu Nif">
+                </div>
+                </div>
+                <div class="form-group">
+                <label for="empresa" class="col-sm-2 control-label">Nombre/Empresa</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" id="empresa" name="empresa" placeholder="Introduce tu empresa">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="direccion" class="col-sm-2 control-label">Direccion</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" id="direccion" name="direccion" placeholder="Introduce tu direccion">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="cp" class="col-sm-2 control-label">CP</label>
+                <div class="col-sm-4">
+                    <input type="number" class="form-control" id="cp" name="cp" placeholder="Introduce tu codigo postal">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="localidad" class="col-sm-2 control-label">Localidad</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" id="localidad" name="localidad" placeholder="Introduce tu localidad">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="provincia" class="col-sm-2 control-label">Provincia</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" id="provincia" name="provincia" placeholder="Introduce tu provincia">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="pais" class="col-sm-2 control-label">Pais</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" id="pais" name="pais" placeholder="Introduce tu pais">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="codigoiban" class="col-sm-2 control-label">IBAN</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" id="codigoiban" name="codigoiban" placeholder="Introduce tu IBAN">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="formadepago" class="col-sm-2 control-label">Forma de pago</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" id="formadepago" name="formadepago" placeholder="Introduce tu forma de pago">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-4">
+                    <button type="submit" class="btn btn-primary">Dar de alta</button>
+                </div>
+            </div>
+
     </div>
+
+</form>
+ </div>   
+        
 
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/jquery-validate/dist/jquery.validate.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/jquery-validate-bootstrap/jquery.validate.bootstrap.js"></script>
+    <script src="bower_components/bootstrap-formvalidate/bs_validaterequired.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
         <!-- build:js({app,.tmp}) scripts/main.js -->
-        <script src="scripts/main.js"></script>
+        <script src="scripts/index.js"></script>
         <!-- endbuild -->
 </body>
 </html>
