@@ -1,6 +1,7 @@
 <!doctype html>
 <html class="no-js">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>Práctica validación formularios</title>
     <meta name="description" content="">
@@ -16,15 +17,13 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
-  </head>
-  <body>
+</head>
 
+<body>
     <div class="hero-unit">
-      <h1>Práctica validación formularios</h1>
-      <p>Aquí debería ir el enlace a <a href="https://github.com/antonio83/practica-validacion-formularios">tu respositorio en GitHub</a>, donde estará la versión de desarrollo.</p>
-    
-
-    <form id="frmalta" class="form-horizontal" novalidate>
+        <h1>Práctica validación formularios</h1>
+        <p>Aquí debería ir el enlace a <a href="https://github.com/antonio83/practica-validacion-formularios">tu respositorio en GitHub</a>, donde estará la versión de desarrollo.</p>
+        <form id="frmalta" class="form-horizontal" novalidate>
             <div class="form-group">
                 <label for="nombre" class="col-sm-2 control-label">Nombre</label>
                 <div class="col-sm-4">
@@ -54,29 +53,33 @@
                 <div class="col-sm-4">
                     <input type="email" class="form-control" id="email2" name="email2" placeholder="Introduce otra vez tu email">
                 </div>
-                </div>
-                <div class="form-group">
+            </div>
+            <div class="form-group">
                 <label for="cuenta" class="col-sm-2 control-label">Cuenta</label>
                 <div class="col-sm-4">
                     <input type="text" class="form-control" id="cuenta" name="cuenta" placeholder="Introduce tu cuenta bancaria">
                 </div>
             </div>
             <div class="form-group">
-                <label for="url" class="col-sm-2 control-label">Url</label>
-                <div class="col-sm-4">
-                    <input type="text" class="form-control" id="url" name="url" placeholder="Introduce tu web">
-                </div>
-                </div>
-            <div class="form-group">
                 <label for="comentario" class="col-sm-2 control-label">¿Como nos has conocido?</label>
                 <div class="col-sm-4">
-                  <input type="radio" class="form-control" id="radio" name="radio" value="conocido" placeholder="Elige tu opcion">Prefiero no contestar
-                  <input type="radio" class="form-control" id="radio" name="radio" value="conocido" placeholder="Elige tu opcion">Publicidad
-                  <input type="radio" class="form-control" id="radio" name="radio" value="conocido" placeholder="Elige tu opcion">Profesionales del sector
-                  <input type="radio" class="form-control" id="radio" name="radio" value="conocido" placeholder="Elige tu opcion">Internet
-                  <input type="radio" class="form-control" id="radio" name="radio" value="conocido" placeholder="Elige tu opcion">A traves de un amigo o conocido
-                 </div>
+                <div class="radio">
+                    <input type="radio" class="form-control" id="radio" name="radio" value="conocido" placeholder="Elige tu opcion">Prefiero no contestar
+                    </div>
+                    <div class="radio">
+                    <input type="radio" class="form-control" id="radio" name="radio" value="conocido" placeholder="Elige tu opcion">Publicidad
+                    </div>
+                    <div class="radio">
+                    <input type="radio" class="form-control" id="radio" name="radio" value="conocido" placeholder="Elige tu opcion">Profesionales del sector
+                    </div>
+                    <div class="radio">
+                    <input type="radio" class="form-control" id="radio" name="radio" value="conocido" placeholder="Elige tu opcion">Internet
+                    </div>
+                    <div class="radio">
+                    <input type="radio" class="form-control" id="radio" name="radio" value="conocido" placeholder="Elige tu opcion">A traves de un amigo
+                    </div>
                 </div>
+            </div>
             <div class="form-group">
                 <label for="demandante" class="col-sm-2 control-label">Demandante (Particular o Empresa)</label>
                 <div class="col-sm-4">
@@ -88,8 +91,8 @@
                 <div class="col-sm-4">
                     <input type="text" class="form-control" id="nif" name="nif" placeholder="Introduce tu Nif">
                 </div>
-                </div>
-                <div class="form-group">
+            </div>
+            <div class="form-group">
                 <label for="empresa" class="col-sm-2 control-label">Nombre/Empresa</label>
                 <div class="col-sm-4">
                     <input type="text" class="form-control" id="empresa" name="empresa" placeholder="Introduce tu empresa">
@@ -142,14 +145,9 @@
                     <button type="submit" class="btn btn-primary">Dar de alta</button>
                 </div>
             </div>
-
     </div>
-
-</form>
- </div>   
-        
-
-
+    </form>
+    </div>
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
@@ -159,9 +157,9 @@
     <script src="bower_components/bootstrap-formvalidate/bs_validaterequired.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
-
-        <!-- build:js({app,.tmp}) scripts/main.js -->
-        <script src="scripts/index.js"></script>
-        <!-- endbuild -->
+    <!-- build:js({app,.tmp}) scripts/main.js -->
+    <script src="scripts/index.js"></script>
+    <!-- endbuild -->
 </body>
+
 </html>

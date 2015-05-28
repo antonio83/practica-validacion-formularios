@@ -7,6 +7,12 @@ $(document).ready(function() {
                     remote: 'http://www.futbolistas.com/users.php'
 
                 },
+                apellidos: {
+                    required: true
+                },
+                telefono: {
+                    required: true
+                },
                 email: {
                     email: true,
                     required: true,
@@ -18,13 +24,36 @@ $(document).ready(function() {
                 comentarios: {
                     required: true
                 },
-                url: {
-                    url: true
+                demandante: {
+                    required: true
                 },
-                edad: {
-                    min: 0,
-                    max: 110
-                }
+                nif: {
+                    required: true
+                },
+                empresa: {
+                    required: true
+                },
+                direccion: {
+                    required: true
+                },
+                cp: {
+                    required: true
+                },
+                localidad: {
+                    required: true
+                },
+                provincia: {
+                    required: true
+                },
+                pais: {
+                    required: true
+                },
+                codigoiban: {
+                    required: true
+                },
+                formadepago: {
+                    required: true
+                },
             },
             errorLabelContainer: '#errores',
             wrapper: 'p'
