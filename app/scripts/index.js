@@ -56,7 +56,8 @@ $(document).ready(function() {
                 required: true,
                 digits: true,
                 minlength: 5,
-                maxlength: 5
+                maxlength: 5,
+                '#cp': true
             },
             localidad: {
                 required: true
@@ -78,8 +79,8 @@ $(document).ready(function() {
         messages: {
                     nombre: {
                         lettersonly: "Introduce sólo carácteres."
-                    }
-                }
+                    },
+                },
     });
 
 });

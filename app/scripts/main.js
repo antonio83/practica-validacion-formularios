@@ -245,8 +245,8 @@ jQuery.validator.addMethod('validacuentabanco', function(value, element, param) 
 //cp
 
 // Si el Código Postal se compone de 4 dígitos, se agrega un 0 a la izquierda.
-            $("#addr_041").focusout(function() {
-                var caracteres = $("#addr_041").val();
+            $("#cp").focusout(function() {
+                var caracteres = $("#cp").val();
                 if (caracteres.length == 4)
-                    $("#addr_041").val("0" + caracteres);
+                    $("#cp").val("0" + caracteres);
             });
