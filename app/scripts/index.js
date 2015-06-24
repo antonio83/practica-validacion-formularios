@@ -84,7 +84,9 @@ $(document).ready(function() {
                 digits: true,
                 minlength: 5,
                 maxlength: 5,
-                "#cp":true
+
+                '#cp': true
+
             },
             localidad: {
                 required: true
@@ -106,8 +108,8 @@ $(document).ready(function() {
         messages: {
                     nombre: {
                         lettersonly: "Introduce sólo carácteres."
-                    }
-                }
+                    },
+                },
     });
 
             submitHandler: function(frmalta) {

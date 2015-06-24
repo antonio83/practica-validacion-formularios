@@ -249,6 +249,7 @@ $("#apellidos").focusout(function() {
     var caracteresApellido = $("#apellidos").val();
                 if (caracteresApellido.length > 4)
                     $("#empresa").val(caracteresNombre + " " + caracteresApellido);
+
             });
 
 
