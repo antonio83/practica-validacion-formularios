@@ -4,6 +4,7 @@ $(document).ready(function() {
         rules: {
             usuario: {
                 required: true,
+                minlength: 4,
                 remote: 'http://www.futbolistas.com/users.php'
 
             },
@@ -46,6 +47,32 @@ $(document).ready(function() {
                 required: true,
                 nifES: true
             },
+            cif:{
+                required: true,
+                cif: true
+            },
+            documento: {
+                required: true,
+                nifES: {
+                    depends: function() {
+                        if ($("#particular").prop("checked") == true) {
+                            return true;
+                        } else
+                            return false;
+                                        }
+            },
+            cif: {
+                    depends: function() {
+                        if ($("#empresa").prop("checked") == true) {
+                            return true;
+                        } else
+                            return false;
+                                        }
+                }
+            },
+            nombreEmpresa: {
+                required: true
+            },
             empresa: {
                 required: true
             },
@@ -56,7 +83,8 @@ $(document).ready(function() {
                 required: true,
                 digits: true,
                 minlength: 5,
-                maxlength: 5
+                maxlength: 5,
+                "#cp":true
             },
             localidad: {
                 required: true
@@ -81,5 +109,19 @@ $(document).ready(function() {
                     }
                 }
     });
+
+            submitHandler: function(frmalta) {
+                var cantidad = ($('input:radio[name=pago]:checked').val());
+                    if (cantidad == "mensual") {
+                        var c = confirm("Ha elegido un modo de pago mensual,la cuota es de 50€");
+                    } else if (cantidad == "trimestral") {
+                        var c = confirm("Ha elegido un modo de pago trimestral,la cuota es de 140€");
+                    } else {
+                        var c = confirm("Ha elegido un modo de pago anual,la cuota es de 550€");
+                    }
+                if (c == true) {
+                    form.submit();
+                                }
+},
 
 });

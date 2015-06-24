@@ -36,6 +36,12 @@
                     <input type="text" class="form-control" id="password" name="password" placeholder="Introduce tu contraseña">
                 </div>
             </div>
+             <div class="form-group">
+                <label class="control-label col-sm-2" for="PassValue">Contraseña fuerte</label>
+                <div class="col-sm-4">
+                <meter value="0" name="PassValue" id="PassValue" max="40"></meter>
+                </div>
+                </div>
             <div class="form-group">
                 <label for="rpassword" class="col-sm-2 control-label">Repetir Contraseña</label>
                 <div class="col-sm-4">
@@ -74,47 +80,39 @@
                 </div>
             </div>
             <div class="form-group">
-                <label for="comentario" class="col-sm-2 control-label">¿Como nos has conocido?</label>
-                <div class="col-sm-4">
-                    <div class="radio">
-                        <input type="radio" class="form-control" id="radio" name="radio" value="conocido" placeholder="Elige tu opcion">Prefiero no contestar
-                    </div>
-                    <div class="radio">
-                        <input type="radio" class="form-control" id="radio" name="radio" value="conocido" placeholder="Elige tu opcion">Publicidad
-                    </div>
-                    <div class="radio">
-                        <input type="radio" class="form-control" id="radio" name="radio" value="conocido" placeholder="Elige tu opcion">Profesionales del sector
-                    </div>
-                    <div class="radio">
-                        <input type="radio" class="form-control" id="radio" name="radio" value="conocido" placeholder="Elige tu opcion">Internet
-                    </div>
-                    <div class="radio">
-                        <input type="radio" class="form-control" id="radio" name="radio" value="conocido" placeholder="Elige tu opcion">A traves de un amigo
-                    </div>
-                </div>
+                <label class="col-sm-2 control-label" for="conocio">¿Cómo nos conoció?</label>
+<div class="col-md-4">
+<select id="conocio" name="conocio" class="form-control">
+<option value="0">Prefiero no contestar</option>
+<option value="1">Publicidad</option>
+<option value="2">Profesionales del sector</option>
+<option value="3">Internet</option>
+<option value="4">A través de un amigo o conocido</option>
+</select>
+</div>
             </div>
             <legend>Datos de Facturacion</legend>
             <div class="form-group">
                 <label for="demandante" class="col-sm-2 control-label">Demandante (Particular o Empresa)</label>
                 <div class="col-sm-4">
                     <div class="radio">
-                        <input type="radio" class="form-control" id="radio" name="radio" value="particular" placeholder="Elige tu opcion" checked>Particular
+                        <input type="radio" class="form-control" id="particular" name="radio" value="particular" placeholder="Elige tu opcion" checked>Particular
                     </div>
                     <div class="radio">
-                        <input type="radio" class="form-control" id="radio" name="radio" value="empresa" placeholder="Elige tu opcion">Empresa
+                        <input type="radio" class="form-control" id="empresa" name="radio" value="empresa" placeholder="Elige tu opcion">Empresa
                     </div>
                 </div>
             </div>
             <div class="form-group">
-                <label for="nif" class="col-sm-2 control-label">CIF/NIF</label>
-                <div class="col-sm-4">
-                    <input type="text" class="form-control" id="nif" name="nif" placeholder="Introduce tu Nif">
-                </div>
-            </div>
+<label for="labeldocumento" class="col-sm-2 control-label" id="labeldocumento">NIF</label>
+<div class="col-sm-4">
+<input type="text" class="form-control" id="nif" name="documento" placeholder="Introduce tu CIF/NIF">
+</div>
+</div>
             <div class="form-group">
                 <label for="empresa" class="col-sm-2 control-label">Nombre/Empresa</label>
                 <div class="col-sm-4">
-                    <input type="text" class="form-control" id="empresa" name="empresa" placeholder="Introduce tu empresa">
+                    <input type="text" class="form-control" id="nombreEmpresa" name="empresa" placeholder="Introduce tu empresa">
                 </div>
             </div>
             <div class="form-group">
@@ -154,15 +152,25 @@
                 </div>
             </div>
             <div class="form-group">
-                <label for="formadepago" class="col-sm-2 control-label">Forma de pago</label>
+                <label for="pago" class="col-sm-2 control-label">Forma de Pago</label>
                 <div class="col-sm-4">
-                    <select class="col-sm-4">
-                        <option value="mensual">Mensual</option>
-                        <option value="saab">Trimestral</option>
-                        <option value="mercedes">Anual</option>
-                    </select>
+                    <div class="radio">
+                <label>
+                <input type="radio" name="pago" id="pago" value="mensual" checked> Mensual
+                </label>
                 </div>
-            </div>
+                <div class="radio">
+                <label>
+                <input type="radio" name="pago" id="pago" value="trimestral"> Trimestral
+                </label>
+                </div>
+                <div class="radio disabled">
+                <label>
+                <input type="radio" name="pago" id="pago" value="anual"> Anual
+                </label>
+                </div>
+                </div>
+                </div>
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-4">
                     <button type="submit" class="btn btn-primary">Dar de alta</button>
@@ -181,7 +189,9 @@
     <!-- build:js({app,.tmp}) scripts/main.js -->
     <script src="scripts/index.js"></script>
     <script src="scripts/main.js"></script>
-    <script type="text/javascript" src="js/messages_es.js"></script>
+    <script type="text/javascript" src="scripts/messages_es.js"></script>
+    <script src="scripts/complexify.js"></script>
+    <script src="scripts/clave.js"></script>
     <!-- endbuild -->
 </body>
 
